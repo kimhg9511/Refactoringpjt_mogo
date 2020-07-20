@@ -1,13 +1,4 @@
 /* default width - 1920px */
-hr{
-    margin: 0;
-}
-ul{
-    display: inline-block;
-}
-span{
-    display: inline-block;
-}
 #wrap{
     width: 1920px;
     margin: 0 auto;
@@ -1425,27 +1416,3 @@ font-style: italic;
 }
 /* end of instagram */ 
 /* end of section community */
-/* footer */
-footer{
-  text-align: center;
-  width: 1920px;
-  height: 560px;
-  background-color: #f8f8f8;
-  border-top: 1px solid #e5e5e5;
-  padding-top: 24px;
-}
-.footer-text {
-  font-family: Montserrat;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #333333;
-}
-.footer-text>.red {
-  color: #f38181;
-}
-/* end of footer */

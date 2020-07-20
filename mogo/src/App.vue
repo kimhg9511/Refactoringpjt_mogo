@@ -1,13 +1,23 @@
 <template>
-  <div id="wrap">
+  <div id="app">
+    <app-header></app-header>
+    <router-view></router-view>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-export default {
+import AppHeader from './views/AppHeader';
+import AppFooter from './views/AppFooter';
 
+export default {
+  components: {
+    AppHeader,
+    AppFooter,
+  },
 }
 </script>
 
 <style scoped>
+
 </style>

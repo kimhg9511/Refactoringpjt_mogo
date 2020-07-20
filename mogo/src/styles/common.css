@@ -1,0 +1,26 @@
+html {
+  font-size: 10px;
+  line-height: 10px;
+  box-sizing: border-box;
+  color: #333333;
+}
+.white {
+  color: #ffffff;
+}
+.bg-white{
+  background-color: #ffffff;
+}
+.red {
+  color: #f38181;
+}
+.bg-red {
+  background-color: #f38181;
+}
+.black {
+  color: #000000;
+}
+.underline {
+  width: 60px;
+  height: 3px;
+  border: 0px;
+}
