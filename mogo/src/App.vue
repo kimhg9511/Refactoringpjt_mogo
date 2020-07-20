@@ -1,6 +1,5 @@
 <template>
-  <div>
-    app.vue
+  <div id="wrap">
   </div>
 </template>
 
