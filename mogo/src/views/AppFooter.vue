@@ -11,7 +11,7 @@ footer{
   line-height: 60px;
   background-color: #f8f8f8;
   border-top: 1px solid #e5e5e5;
-  font-weight: 400;
+  font-weight: 500;
 }
 .footer-text {
   font-family: Montserrat;

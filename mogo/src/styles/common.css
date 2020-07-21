@@ -16,6 +16,12 @@ html {
 .bg-red {
   background-color: #f38181;
 }
+.bg-cyan {
+  background-color : #95e1d3;
+}
+.grey {
+  color: #999999;
+}
 .black {
   color: #000000;
 }

@@ -1,7 +1,7 @@
 <template>
   <header 
     :style="{
-      backgroundImage: `linear-gradient(to top, rgba(252,227,138,0.9), rgba(243,129,129,0.9)), url(${require('@/images/header_background.png')}`
+      backgroundImage: `linear-gradient(to top, rgba(252,227,138,0.9), rgba(243,129,129,0.9)), url(${require('@/images/header_background.png')})`
     }"
     class="white"
   >
@@ -39,13 +39,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 header {
+  height: 1000px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: normal;
-  height: 1000px;
   position: relative;
 }
 .logo {
@@ -96,7 +96,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
 }
-header>.underline {
+header> .underline {
   position: absolute;
   bottom: 31%;
   left: 50%;
@@ -120,7 +120,6 @@ header>.underline {
 .slide{
   min-width: 1240px;
   text-align: center;
-
   position: absolute;
   bottom: 2.7%;
   left: 50%;
