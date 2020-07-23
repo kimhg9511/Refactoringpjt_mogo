@@ -5,11 +5,7 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    redirect: '/story',
-  },  
-  {
-    path: '/story',
-    component: () => import('../views/SecStoryAboutUs.vue')
+    component: () => import('../views/AppContents.vue')
   }
 ]
 

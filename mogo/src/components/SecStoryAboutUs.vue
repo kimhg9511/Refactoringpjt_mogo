@@ -1,20 +1,22 @@
 <template>
   <div class="story-about-us">
-    <div class="subtitle">What we do</div>
-    <div class="title">STORY ABOUT US</div>
-    <hr class="underline bg-red">
+    <art-title></art-title>
     <span class="contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
     <div class="card-wrap">
-      <img src="" alt="" class="image-card bg-cyan">
-      <img src="" alt="" class="image-card bg-cyan">
-      <img src="" alt="" class="image-card bg-cyan">
+      <img src="../images/story_about_us/story_about_us_1.png" alt="" class="image-card bg-cyan">
+      <img src="../images/story_about_us/story_about_us_2.png" alt="" class="image-card bg-cyan">
+      <img src="../images/story_about_us/story_about_us_3.png" alt="" class="image-card bg-cyan">
     </div>
   </div>
+  
 </template>
 
 <script>
+import ArtTitle from './ArtTitle'
 export default {
-
+  components: {
+    ArtTitle,
+  }
 }
 </script>
 
@@ -24,35 +26,12 @@ export default {
   height: 750px;
   position: relative;
 }
+/* align center */
 .story-about-us>*{
   left: 50%;
   transform: translateX(-50%);  
 }
-.subtitle {
-  height: 23px;
-  font-family: KaushanScript;
-  font-size: 2.4rem;
-  line-height: 2.4rem;
-  text-align: center;
 
-  position: absolute;
-  top:12%;
-  /* left: 50%;
-  transform: translateX(-50%); */
-}
-.title {
-  height: 23px;
-  font-family: Montserrat;
-  font-size: 3rem;
-  line-height: 3rem;
-  font-weight: bold;
-  text-align: center;
-
-  position: absolute;
-  top: 18.2668%;
-  /* left: 50%;
-  transform: translateX(-50%); */
-}
 .underline{
   position: absolute;
   top: 26.6667%;
