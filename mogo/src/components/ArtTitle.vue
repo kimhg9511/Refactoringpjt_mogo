@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 .title-wrap{
-  /* height: 200px; */
+  height: 0;
   position: relative;
 }
 .title-wrap>*{

@@ -2,7 +2,7 @@
   <div class="story-about-us">
     <art-title></art-title>
     <span class="contents">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-    <div class="card-wrap">
+    <div class="image-card-wrap">
       <img src="../images/story_about_us/story_about_us_1.png" alt="" class="image-card bg-cyan">
       <img src="../images/story_about_us/story_about_us_2.png" alt="" class="image-card bg-cyan">
       <img src="../images/story_about_us/story_about_us_3.png" alt="" class="image-card bg-cyan">
@@ -52,7 +52,7 @@ export default {
   /* left: 50%;
   transform: translateX(-50%); */
 }
-.card-wrap {
+.image-card-wrap {
   min-width: 1280px;
   position: absolute;
   bottom: 14.6668%;

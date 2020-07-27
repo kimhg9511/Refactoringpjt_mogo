@@ -1,93 +1,105 @@
 <template>
   <div class="amazing-services">
-    <span class="subtitle">We work with</span><br>
-    <span class="title">AMAZING SERVICES</span>
-    <hr class="underline bg-red">
-    <div class="items">
-      <span class="services-title">PHOTOGRAPHY</span><br>
-      <span class="services-content">LLorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+    <art-title></art-title>
+    <div class="card-wrap">
+      <div class="cards" v-for="card in cards" :key="card.title">
+        <img class="material-icons" :src="`${require('@/images/amazing_services/' + card.icon + '.png')}`">
+        <div>
+          <div class="card-title">{{ card.title }}</div>
+          <div class="card-content grey">{{ card.content }}</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
-PHOTOGRAPHY
-WEB DESIGN
-CREATIVITY
-SEO
-CSS/HTML
-DIGITAL
-LLorem ipsum dolor sit amet, consectetur adipiscing elit
+
+<script>
+import ArtTitle from './ArtTitle'
+export default {
+  data() {
+    return {
+      cards:[
+        {
+          'icon': 'photography',
+          'title': 'PHOTOGRAPHY',
+          'content': 'LLorem ipsum dolor sit amet, consectetur adipiscing elit'
+        },
+        {
+          'icon': 'web_design',
+          'title': 'WEB DESIGN',
+          'content': 'LLorem ipsum dolor sit amet, consectetur adipiscing elit'
+        },
+        {
+          'icon': 'seo',
+          'title': 'SEO',
+          'content': 'LLorem ipsum dolor sit amet, consectetur adipiscing elit' 
+        },
+        
+        {
+          'icon': 'css_html',
+          'title': 'CSS/HTML',
+          'content': 'LLorem ipsum dolor sit amet, consectetur adipiscing elit'
+        },
+        {
+          'icon': 'digital',
+          'title': 'DIGITAL',
+          'content': 'LLorem ipsum dolor sit amet, consectetur adipiscing elit'
+        },
+        {
+          'icon': 'creativity',
+          'title': 'CREATIVITY',
+          'content': 'LLorem ipsum dolor sit amet, consectetur adipiscing elit'
+        }
+      ]
+    }
+  },
+  components: {
+    ArtTitle,
+  }
+}
+</script>
+
 <style scoped>
-/* section we-work-with */
-.amazing-services{
+.amazing-services {
   text-align: center;
   position: relative;
   height: 650px;
 }
-/* .weworkwith>*{
-  left: 50%;
-  transform: translateX(-50%);
-} */
-
-.items{
-    width: 333px;
-    height: 120px;
-    height: 70px;
-    margin: 0 34px;
-    display: inline-block;
+.card-wrap {
+  margin-top: 290px;
+  display: flex;
+  flex-wrap: wrap;
 }
-.items>img{ 
-    width: 32px;
-    height: 32px;
-    float: left;
+.cards{
+  width: 31%;
+  display: flex;
+  padding: 0 1.15%;
 }
-.services-title{
-    height: 10px;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #333333;
-    /**/
-    /* line-height: 10px; */
-    float: left;
-    margin-left: 27px;
-    /* margin-bottom: 20px; */
+.cards:nth-of-type(-n+3) {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 47px;
 }
-.services-content {
-    width: 300px;
-    height: 39px;
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: left;
-    color: #999999;
-    margin-left: 59px;
-    margin-top: -2px;
-  }
-/* end of section we-work-with */
+.material-icons {
+  width: 32px;
+  height: 32px;
+  font-size: 3.2rem;
+  color: #95e1d3; 
+  margin-right: 27px;
+}
+.card-title{
+  font-family: Montserrat;
+  font-size: 1.4rem;
+  text-align: left;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.card-content {
+  font-family: Roboto;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  text-align: left;
+  padding-bottom: 50px;
+  /* border option */
+}
 </style>
-
-<script>
-export default {
-  data() {
-    return {
-      cards:{
-        'title': [
-
-        ],
-        'content': [
-
-        ]
-      }
-    }
-  }
-}
-</script>
