@@ -1,7 +1,7 @@
 <template>
-  <div class="statistics">
+  <div class="statistics bg-cyan">
     <div 
-      class="items white bg-cyan"
+      class="items white"
       v-for="{number, name} in this.stats"
       :key = number
     >
@@ -14,6 +14,8 @@
 <style scoped>
 .statistics{
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .items{
   width: 240px;
@@ -23,28 +25,19 @@
   line-height: 1.4rem;
   border-left: 1px solid #ffffff;
 
-  display: inline-block;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .items:last-of-type{
   border-right: 1px solid #ffffff;
 }
 .number{
-  height: 52px;
-  line-height: 5.2rem;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 33%;
   font-size: 7.2rem;
   font-weight: bold;
-
-  position: absolute;
-  top: 33.3333%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.name{
-  position: absolute;
-  bottom: 33.3333%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-bottom: 30px;
 }
 </style>
 

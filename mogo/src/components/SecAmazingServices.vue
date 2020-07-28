@@ -1,9 +1,9 @@
 <template>
   <div class="amazing-services">
     <art-title></art-title>
-    <div class="card-wrap">
-      <div class="cards" v-for="card in cards" :key="card.title">
-        <img class="material-icons" :src="`${require('@/images/amazing_services/' + card.icon + '.png')}`">
+    <div class="cards">
+      <div class="card" v-for="card in cards" :key="card.title">
+        <img class="card-icon" :src="`${require('@/images/amazing_services/' + card.icon + '.png')}`">
         <div>
           <div class="card-title">{{ card.title }}</div>
           <div class="card-content grey">{{ card.content }}</div>
@@ -64,26 +64,27 @@ export default {
   text-align: center;
   position: relative;
   height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.card-wrap {
-  margin-top: 290px;
+.cards {
+  margin-top: 65px;
   display: flex;
   flex-wrap: wrap;
+  padding: 0 20.3%;
 }
-.cards{
-  width: 31%;
+.card{
+  width: 33.33%;
   display: flex;
-  padding: 0 1.15%;
 }
-.cards:nth-of-type(-n+3) {
+.card:nth-of-type(-n+3) {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 47px;
 }
-.material-icons {
+.card-icon {
   width: 32px;
   height: 32px;
-  font-size: 3.2rem;
-  color: #95e1d3; 
   margin-right: 27px;
 }
 .card-title{
@@ -100,6 +101,5 @@ export default {
   line-height: 1.6;
   text-align: left;
   padding-bottom: 50px;
-  /* border option */
 }
 </style>
