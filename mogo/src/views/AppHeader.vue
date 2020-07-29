@@ -1,131 +1,87 @@
 <template>
   <header 
     :style="{
-      backgroundImage: `linear-gradient(to top, rgba(252,227,138,0.9), rgba(243,129,129,0.9)), url(${require('@/images/header_background.png')})`
+      backgroundImage: `linear-gradient(to top, rgba(252,227,138,0.9), rgba(243,129,129,0.9)), url(${require('@/images/header/bg.png')})`
     }"
     class="white"
   >
-    <div class="logo">MoGo</div>
-    <div class="nav-bar">
-      <li class="nav-item">ABOUT</li>
-      <li class="nav-item">SERVICE</li>
-      <li class="nav-item">WORK</li>
-      <li class="nav-item">BLOG</li>
-      <li class="nav-item">CONTACT</li>
-      <!-- <li class="nav-item"></li>
-      <li class="nav-item"></li> -->
-    </div>
+    <navigation-bar></navigation-bar>
     <div class="subtitle__header">
-      Creative&nbsp;Template
+      Creative Template
     </div>
     <div class="title__header">
-      WELCOME<br>TO&nbsp;MOGO
+      WELCOME TO MOGO
     </div>    
     <hr class="underline bg-white">
-    <div class="learn-more">LEARN&nbsp;MORE</div>
-    <div class="slide">
-      <ul class="slide-name">
-        <li class="slide-item"><span class="number">01</span>INTRO</li>
-        <li class="slide-item"><span class="number">02</span>WORK</li>
-        <li class="slide-item"><span class="number">03</span>ABOUT</li>
-        <li class="slide-item"><span class="number">04</span>CONTACTS</li>
-      </ul>
-    </div>
+    <div class="learn-more">LEARN MORE</div>
+    <ul class="slides">
+      <li class="slide"><span class="number">01</span>INTRO</li>
+      <li class="slide"><span class="number">02</span>WORK</li>
+      <li class="slide"><span class="number">03</span>ABOUT</li>
+      <li class="slide"><span class="number">04</span>CONTACTS</li>
+    </ul>
   </header> 
 </template>
 
 <script>
+import NavigationBar from '../components/NavigationBar';
+
 export default {
+  components: {
+    NavigationBar,
+  }
 }
 </script>
 
 <style scoped>
+/* notice: 배경 이미지 이슈 해결 */
 header {
   height: 1000px;
   background-size: 100% 100%;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat;
   background-position: center;
-  background-blend-mode: normal;
-  position: relative;
-}
-.logo {
-  font-family: Montserrat;
-  font-size: 3rem;
-  line-height: 3rem;
-  font-weight: bold;
-  text-align: left;
-
-  position: absolute;
-  top: 2.5%;
-  left: 18.750%;
-}
-.nav-bar{
-  position: absolute;
-  top: 3.5%;
-  right: 18.750%;
-}
-.nav-item{
-  font-family: Montserrat;
-  font-size: 1.4rem;
-  font-weight: normal;
+  background-blend-mode: normal; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-
-  display: inline-block;
-  margin: 0 27.5px;
 }
 .subtitle__header {
+  width: 520px;
   font-family: KaushanScript;
   font-size: 7.2rem;
-  text-align: center;
-
-  position: absolute;
-  top: 23%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 180px;
 }
 .title__header {
+  width: 810px;
   font-family: Montserrat;
   font-size: 15rem;
   font-weight: bold;
-  line-height: 15rem;
-  letter-spacing: normal;
-  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
 
-  position: absolute;
-  top: 36%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-header> .underline {
-  position: absolute;
-  bottom: 31%;
-  left: 50%;
-  transform: translateX(-50%);
-}
 .learn-more {
   width: 160px;
   height: 40px;
   font-family: Montserrat;
   font-size: 1.4rem;
   font-weight: bold;
-  line-height: 4rem;
-  text-align: center;
   border: 3px solid #ffffff;
+  margin-top: 50px;
 
-  position: absolute;
-  bottom: 23%;
-  left: 50%;
-  transform: translateX(-50%);
+  /* center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.slide{
-  min-width: 1240px;
-  text-align: center;
-  position: absolute;
-  bottom: 2.7%;
-  left: 50%;
-  transform: translateX(-50%);
+.slides {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end;
+  margin-bottom: 25px;
 }
-.slide-item {
+.slide {
   width: 280px;
   font-family: Montserrat;
   font-size: 1.8rem;
@@ -139,7 +95,7 @@ header> .underline {
   border-top: 3px solid rgba(255,255,255, 0.5);
   padding-top: 25px;
 }
-.slide-item>.number {
+.slide>.number {
   font-size: 2.4rem;
   font-weight: bold;
   padding-right: 5px;

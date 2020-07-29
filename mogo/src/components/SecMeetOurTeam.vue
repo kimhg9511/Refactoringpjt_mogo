@@ -3,7 +3,7 @@
     <art-title></art-title>
     <span class="comment grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
     <div class="cards">
-      <div class="card" :key="card.name" v-for="card in cards">
+      <div class="card" :key="card.name" v-for="card in cards" @click="card.selected = !card.selected">
         <div class="card-image bg-cyan">
           <img :src="`${require('../images/meet_our_team/'+card.image+'.png')}`" alt="">
           <div class="card-menu" v-if="card.selected">
@@ -41,7 +41,7 @@ export default {
     return {
       cards: [
         {
-          'selected': true,
+          'selected': false,
           'image': 'matthew_dix',
           'name': 'MATTHEW DIX',
           'job': 'Graphic Design',

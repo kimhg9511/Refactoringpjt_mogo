@@ -1,37 +1,15 @@
 <template>
-   <div class="panel blogs">
-    <span class="blogs-title">BLOGS</span>
-    <div class="blogs-section">
-      <div class="blogs-image">
-        <img src="../../static/mogo/img/mogo/mogo_blog1.png" alt="">
-      </div>
-      <div class="blogs-contents">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-      </div>
-      <div class="blogs-date">
-        Jan 9, 2016
-      </div>
-    </div>
-    <div class="blogs-section">
-      <div class="blogs-image">
-        <img src="../../static/mogo/img/mogo/mogo_blog2.png" alt="">
-      </div>
-      <div class="blogs-contents">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-      </div>
-      <div class="blogs-date">
-        Jan 9, 2016
-      </div>
-    </div>
-    <div class="blogs-section">
-      <div class="blogs-image">
-        <img src="../../static/mogo/img/mogo/mogo_blog3.png" alt="">
-      </div>
-      <div class="blogs-contents">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-      </div>
-      <div class="blogs-date">
-        Jan 9, 2016
+   <div class="blogs">
+    <div class="blogs-title">BLOGS</div>
+    <div class="blogs-item" :key="post.image" v-for="post in posts">
+      <img :src="`${require('../images/sns/blogs_'+post.image+'.png')}`" alt="">
+      <div class="item-summary">
+        <p class="summary-title">
+          {{ post.title }}
+        </p>
+        <p class="summary-date grey">
+          {{ post.date }}
+        </p>
       </div>
     </div>
   </div>  
@@ -39,10 +17,61 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      posts: [
+        {
+          image:'1',
+          title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+          date: 'Jan 9, 2016',
+        },
+                {
+          image:'2',
+          title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+          date: 'Jan 9, 2016',
+        },
+                {
+          image:'3',
+          title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+          date: 'Jan 9, 2016',
+        }
+      ]
+    }
+  }
 }
 </script>
 
-<style>
-
+<style scoped>
+.blogs{
+  flex-shrink: 0;
+  width: 360px;
+}
+.blogs-title {
+  font-family: Montserrat;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.blogs-item{
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-end;
+}
+.blogs-item>.item-summary{
+  margin-left: 20px;
+}
+.summary-title {
+  font-family: Montserrat;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.summary-date {
+  font-weight: 300;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 5px;
+}
 </style>

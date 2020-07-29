@@ -12,9 +12,6 @@
       <div class="image-card bg-cyan">
         <img src="../images/story_about_us/story_about_us_3.png" alt="">        
       </div>
-
-      
-
     </div>
   </div>
   

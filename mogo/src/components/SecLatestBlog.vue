@@ -2,7 +2,7 @@
   <div class="latest-blog">
     <art-title></art-title>
     <div class="blog-cards">
-      <div class="blog-card" :key="post.name" v-for="post in posts">
+      <div class="blog-card" :key="post.image" v-for="post in posts">
         <div class="card-image">
           <img :src="`${require('../images/latest_blog/'+post.image+'.png')}`" alt="">
           <div class="image-attach bg-cyan">
@@ -82,12 +82,27 @@ export default {
       posts: [
         {
           image:'1',
-          name:'a',
           date:'15',
           title:'Lorem ipsum dolor sit amet',
           description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
           viewCnt: 542,
           commentCnt: 77,
+        },
+        {
+          image:'2',
+          date:'14',
+          title:'Lorem ipsum dolor sit amet',
+          description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+          viewCnt: 992,
+          commentCnt: 42,
+        },
+        {
+          image:'3',
+          date:'12',
+          title:'Lorem ipsum dolor sit amet',
+          description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+          viewCnt: 1560,
+          commentCnt: 98,
         }
       ]
     }
@@ -105,6 +120,7 @@ export default {
 }
 .blog-card{
   width: 33%;
+  margin: 0 15px;
   display: flex;
   flex-direction: column;
 }

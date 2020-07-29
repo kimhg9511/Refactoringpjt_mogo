@@ -15,19 +15,6 @@
         <img src="../images/some_of_our_works/7.png" alt="">
       </div>
     </div>
-    <!-- <div class="section comment-wrap">
-      <div class="comment-content-wrap">
-        <img class="carousel-left" src="../../static/mogo/img/mogo/mogo_carousel-left.png" alt="">
-        <img class="carousel-right" src="../../static/mogo/img/mogo/mogo_carousel-right.png" alt="">
-        <div class="comment-image">
-          <img src="img/mogo/mogo_comment.png" alt="" class="small">
-        </div>
-        <div class="comment-comments">
-          <span class="comment-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. eiusmod tempor incididunt ut labore et dolore magna aliqua."</span>              
-          <hr class="underline"><span class="comment-name">Joshua&nbsp;Earle</span>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -78,18 +65,4 @@ export default {
   grid-template-rows: repeat(2,390px); 
 }
 }
-/* comment */
-/* .some_of_our_works>.comment-wrap{
-  padding-top: 15px;
-  margin: 0;
-  background-color: #ffffff;
-}
-.some_of_our_works>.comment-wrap>.comment-content-wrap>.comment-image{
-  width: 210px;
-  height: 210px;
-  border: none;
-}
-.some_of_our_works .comment-text{
-  margin-top: 40px;
-} */
 </style>

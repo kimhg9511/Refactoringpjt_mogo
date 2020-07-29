@@ -6,13 +6,14 @@
       <img src="../images/what_we_do/what_we_do.png" alt="" class="floated-image">
       <div class="dropdowns">
         <div class="dropdown" :key=item.title v-for="item in items">
-          <div class="dropdown-header">
+          <div class="dropdown-header" @click="toggleDropdown(item)">
             <div class="header-icon">
               <img :src="`${require('@/images/amazing_services/' + item.icon + '.png')}`" alt="">
             </div>
             <span class="header-title">{{ item.title }}</span>
-            <div class="header-toggle" @click="toggleDropdown">
-              <img src="../images/what_we_do/drop_up.png">
+            <div class="header-toggle">
+              <img src="../images/what_we_do/drop_up.png" v-if="item.selected">
+              <img src="../images/what_we_do/drop_down.png" v-else>
             </div>
           </div>
           <div class="dropdown-body" v-if="item.selected">
@@ -57,8 +58,11 @@ export default {
     }
   },
   methods: {
-    toggleDropdown() {
-      this.items.map(item => item.selected = !item.selected);
+    toggleDropdown(item) {
+      this.items.map(item => {
+        if(item.selected) item.selected = !item.selected
+      });
+      item.selected = !item.selected;
     }
   }
 }

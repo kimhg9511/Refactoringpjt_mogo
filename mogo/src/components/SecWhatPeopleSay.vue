@@ -59,7 +59,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /* notice: comment와의 세로 거리 맞출것. */
 .what-people-say{
   height: 830px;
