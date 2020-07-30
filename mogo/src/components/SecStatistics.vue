@@ -1,12 +1,12 @@
 <template>
   <div class="statistics bg-cyan">
     <div 
-      class="items white"
+      class="item white"
       v-for="{number, name} in this.stats"
       :key = number
     >
-      <span class="number">{{number}}</span>
-      <span class="name">{{name}}</span>
+      <p class="number">{{ number }}</p>
+      <p class="name">{{ name }}</p>
     </div>
   </div>  
 </template>
@@ -16,25 +16,25 @@
   text-align: center;
   display: flex;
   justify-content: center;
-}
-.items{
-  width: 240px;
   height: 270px;
+}
+.item{
+  width: 240px;
   font-family: Montserrat;
   font-size: 1.4rem;
-  line-height: 1.4rem;
   border-left: 1px solid #ffffff;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-.items:last-of-type{
+.item:last-of-type{
   border-right: 1px solid #ffffff;
 }
+
 .number{
   height: 50px;
   line-height: 50px;
-  margin-top: 33%;
   font-size: 7.2rem;
   font-weight: bold;
   margin-bottom: 30px;
